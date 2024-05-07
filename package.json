@@ -1,0 +1,25 @@
+{
+  "name": "freshwrite",
+  "version": "1.0.0",
+  "description": "A platform for fleeting thoughts and instant expression. Write, share, and explore blogs that reset after each session, keeping your creative space fresh and dynamic.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahilTyagii/FreshWrite.git"
+  },
+  "author": "Sahil Tyagi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SahilTyagii/FreshWrite/issues"
+  },
+  "homepage": "https://github.com/SahilTyagii/FreshWrite#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
