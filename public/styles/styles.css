@@ -1,0 +1,98 @@
+body {
+    background-color: #FBFBFB;
+}
+.navbar {
+    background-color: #FBFBFB;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.7rem 2rem 1rem 2rem;
+}
+.nav-item {
+    padding: 0rem 0.6rem 0rem 0.6rem;
+}
+.navbar-brand {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    color: #3b3b3b;
+}
+.navbar-brand:hover {
+    opacity: 90%;
+}
+h1 {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color:#191335;
+  background-image:linear-gradient(to right, #191335, #191335 33.33333%, #01A5F8 66.66666%, #01BFD8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 100%;
+  background-position: top left;
+  transition:all 1s ease-in-out;
+}
+
+h1:hover {
+  background-position: top left 100%;
+}
+.unique {
+    background: linear-gradient(
+        to right,
+        #f32170 20%,
+        #ff6b08 30%,
+        #cf23cf 70%,
+        #eedd44 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container-fluid {
+    padding: 1% 10%;
+}
+p {
+    color: #3b3b3b;
+    padding: 1rem 0 1rem 0;
+}
+.btn{
+
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 21px;
+    color: #fff;
+    background-color: #ff6b08;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    border-radius: 50px;
+    transition : 907ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    }
+    
+    .btn:hover{
+    
+    transition : 907ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background-color: #eedd44;
+    color: #ffffff;
+    border: none;
+    }
