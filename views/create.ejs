@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+    <div class="container-fluid">
+
+        <form action="/submit" method="POST">
+            <div class="mb-3">
+                <label for="title" class="imput-label">Enter title</label>
+                <input type="text" class="form-control" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="data" class="input-label">Start writing</label>
+                <textarea name="data" cols="50" rows="10" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn orange-btn">Post</button>
+        </form>
+
+    </div>
+
+
+
+<%- include("partials/footer.ejs") %>

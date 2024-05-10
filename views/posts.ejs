@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+<div class="container-fluid">
+  <button class="btn orange-btn create-btn" onclick="location.href='/create'">
+    <i class="fa-solid fa-pen"></i>&nbspCreate
+  </button>
+
+  <% if (locals.names && locals.blogs && locals.words) { %>
+  <div class="row">
+    <% for (let i = 0; i < names.length; i++) { %>
+
+    <div class="col-lg-3">
+      <div class="d-flex h-100">
+        <div class="card" style="width: 18rem; height: 19rem">
+          <div class="card-body">
+            <h5 class="card-title"><%= names[i] %></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              Words: <%= words[i] %>
+            </h6>
+            <p class="card-text">
+              <%= blogs[i].split(" ").slice(0, 20).join(" ") %>...
+            </p>
+            <div class="card-footer d-flex">
+              <form action="/read" method="POST">
+                <input type="hidden" name="title" value="<%= names[i] %>">
+                <button type="submit" class="btn btn-outline-success card-btn">
+                Read
+              </button>
+            </form>
+              
+              <button type="button" class="btn btn-outline-warning card-btn">
+                Edit
+              </button>
+              <button type="button" class="btn btn-outline-danger card-btn">
+                Delete
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% } %>
+  </div>
+  <% } else { %>
+  <h2>No Posts to Display</h2>
+  <% } %>
+</div>
+<%- include("partials/footer.ejs") %>
