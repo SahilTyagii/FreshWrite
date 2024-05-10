@@ -52,6 +52,53 @@ app.post("/read", (req, res) => {
     })
 })
 
+app.post("/edit", (req, res) => {
+    const name = req.body["title"]
+    res.render("edit.ejs", {
+        heading: name,
+        content: blogs[name],
+    })
+})
+
+app.post("/update", (req, res) => {
+    const heading = req.body["title"]
+    const data = req.body["data"]
+    blogs[heading] = data
+
+    var title = []
+    var content = []
+    var wordCount = []
+    for (const[name, data] of Object.entries(blogs)) {
+        title.push(name)
+        content.push(data)
+        wordCount.push(data.split(" ").length)
+    }
+    res.render("posts.ejs", {
+        names: title,
+        blogs: content,
+        words: wordCount,
+    })
+})
+
+app.post("/delete", (req, res) => {
+    const heading = req.body["title"]
+    delete blogs[heading]
+
+    var title = []
+    var content = []
+    var wordCount = []
+    for (const[name, data] of Object.entries(blogs)) {
+        title.push(name)
+        content.push(data)
+        wordCount.push(data.split(" ").length)
+    }
+    res.render("posts.ejs", {
+        names: title,
+        blogs: content,
+        words: wordCount,
+    })
+})
+
 app.get("/posts", (req, res) => {
     // for (var member in blogs) delete blogs[member];
     var title = []

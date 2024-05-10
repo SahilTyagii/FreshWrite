@@ -108,6 +108,9 @@ p {
 .card-btn {
     margin: 1rem 0.2rem 1rem 0.2rem;
 }
+.card {
+    margin: 1rem 0 1rem 0;
+}
 .card:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
