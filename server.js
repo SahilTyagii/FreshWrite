@@ -116,6 +116,10 @@ app.get("/posts", (req, res) => {
     })
 })
 
+app.get("/about", (req, res) => {
+    res.render("about.ejs")
+})
+
 app.listen(port, () => {
     console.log(`Server is listening on port: ${port}.`)
 })
